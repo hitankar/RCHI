@@ -1,0 +1,46 @@
+.navbar-rchi {
+	.icon-bar {
+		background-color: black;
+	}
+}
+
+div[role="document"] {
+	overflow: hidden;
+}
+
+
+header[role="banner"] .container {
+	border-top: solid 5px #17A400;
+	min-height: 6em;
+	background: #171719;
+	@include transition(background 300ms linear);
+}
+
+.home {
+	header[role="banner"] .container {
+		background: 0 none;
+	}
+}
+
+.header-colored {
+	background: #171719 !important;
+	@include opacity(0.8);
+	@include transition(background 300ms linear);
+}
+
+.navbar-brand {
+	background: url(../images/logo.png) top left no-repeat;
+	width: 450px;
+	height: 75px;
+	padding-left: 80px;
+	@include invert-color($link-color);
+	text-transform: uppercase;
+	line-height: 1.2em;
+	small {
+		display: block;
+	}
+
+	&:hover {
+		@include invert-color($link-hover-color);
+	}
+}

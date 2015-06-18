@@ -1,0 +1,20 @@
+footer[role="contentinfo"] {
+	@include invert-color($text-color);
+	.container {
+		margin-top: 2em;
+		.floating-bar {
+			margin-bottom: 0px;
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			background: #000;
+			padding: 2em;
+			z-index: 9;
+			.close {
+				color: darken(#fff, 15%);
+				padding: 0px 0px 2px;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,26 @@
+.conversion_form {
+	.form-group {
+		background: url(../images/zipcode_textbox.png) top left no-repeat;
+		width: 238px;
+		height: 63px;
+		margin-right: -4px;
+
+		#conversion-zipcode {
+			  margin: 1em;
+			  border: 0 none;
+			  background: transparent;
+			  text-transform: uppercase;
+			  @include invert-color($text-color);
+			  @include box-shadow(none);
+		}
+	}
+	#conversion-button {
+		background: url(../images/conversion_button.png) top right no-repeat;
+		width: 178px;
+		height: 63px;
+		border: 0 none;
+		padding: 1em;
+  		line-height: 2.5em;
+		text-transform: uppercase;
+	}
+}

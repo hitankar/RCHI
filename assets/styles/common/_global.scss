@@ -1,0 +1,49 @@
+
+@mixin invert-color($foreground-color) {
+	color: lighten($foreground-color, 50%);
+	a {
+		color: lighten($foreground-color, 75%);
+	}
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+// h1, .h1 { font-size: $font-size-h2 !default; }
+// h2, .h2 { font-size: $font-size-h3 !default; }
+// h3, .h3 { font-size: $font-size-h4 !default; }
+// h4, .h4 { font-size: $font-size-h5 !default; }
+// h5, .h5 { font-size: $font-size-h6 !default; }
+// h6, .h6 { font-size: $font-size-h6 !default; }
+
+.search-form {
+	margin: 1em auto;
+	.input-group {
+		width: 100%;
+		border: solid 10px #B7C1B6;
+		.search-field {
+			border: darken(#B7C1B6, 10%);
+			border-width: 1px 0 1px 1px;
+		}
+		.input-group-btn {
+			background: #fff;
+			text-align: right;
+			.search-submit {
+				@extend .glyphicon;
+				@extend .glyphicon-search;
+				line-height: 1.5;
+	  			margin-top: -1px;
+	  			margin-left: 1px;
+				background: #1D9B0B;
+				// text-indent: -5000em;
+			}
+		}
+	}
+}
+
+hr {
+	background: url(../images/basic_hr.png) top center no-repeat;
+}

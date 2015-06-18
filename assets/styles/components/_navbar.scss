@@ -1,0 +1,39 @@
+
+.navbar-nav {
+  > li > a {
+  	@include invert-color($link-color);
+    padding-top:    10px;
+    padding-bottom: 10px;
+    // line-height: $line-height-computed;
+    text-transform: uppercase;
+    &:hover {
+    	background: none;
+      @include invert-color($link-hover-color);
+    }
+  }
+
+  // Uncollapse the nav
+  @media (min-width: $grid-float-breakpoint) {
+    float: left;
+    margin: 0;
+
+    > li {
+      float: left;
+      > a {
+      }
+    }
+  }
+}
+
+.nav-pills {
+  li a{
+    text-transform: uppercase;
+    &:hover {
+      background: none;
+      @include invert-color($link-hover-color);
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}

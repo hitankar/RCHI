@@ -1,0 +1,99 @@
+body {
+	background: $body-color;
+	font-family: $regular-font-face;
+}
+
+.container[role="document"] {
+	margin-top: 0;
+	background: $content-color;
+	padding: 0;
+	border-top: solid 2px #091231;
+	.content {
+		margin: 0em 4em;
+		padding-top: 6em;
+	}
+	.page-section {
+		margin: 0 -7.8em;
+		// background-color: silver;
+		padding: 0 6.8em 6em;
+		@include clearfix()
+	}
+	/** page section theme **/
+	.dark-bg {
+		@include invert-color($text-color);
+
+		hr {
+			background: url(../images/bark-bg_hr.png) bottom center no-repeat;
+			height: 40px;
+			border: 0 none;
+		}
+	}
+
+	/* steps */
+
+
+	.steps {
+		@extend .row-fluid;
+		.step-container {
+			@extend .col-sm-3;
+			@include clearfix();
+			position: relative;
+			.step-number {
+				position: absolute;
+				top: 5%;
+				left: 5%;
+				float: left;
+				background-color: #18a403;
+				width: 2em;
+				height: 2em;
+				text-align: center;
+				color: white;
+				line-height: 2;
+				font-size: x-large;
+				z-index: 1;
+			}
+			.step-img {
+				z-index: 0;
+			}
+
+			.step-caption {
+				margin-top: 1em;
+				display: block;
+				text-align: justify;
+				font-weight: bolder;
+			}
+
+			&:first-child {
+				@extend .col-sm-offset-2;
+			}
+		}
+	}
+
+	.header-banner {
+		position: relative; 
+		width: 100%;
+		> div {
+			position: absolute; 
+			top: 0; 
+			left: 0;
+			@include gradient-vertical(#000000, #592452, 0%, 100%);
+			img {
+				@include opacity(0.2);
+			}
+		}
+	}
+
+
+	.page-header {
+	  margin: -32px -110px 50px -109px;
+	  border-bottom: solid 1px #fff;
+	  background: url(../images/page_header.png)top left;
+	  padding: 3em;
+	  h1 {
+	  	margin-left: 54px;
+	  	color: #fff;
+	  	text-transform: uppercase;
+	  }
+	}
+
+}
