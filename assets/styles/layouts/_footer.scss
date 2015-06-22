@@ -1,7 +1,7 @@
 footer[role="contentinfo"] {
 	@include invert-color($text-color);
 	.container {
-		margin-top: 2em;
+		margin: 2em auto;
 		.floating-bar {
 			margin-bottom: 0px;
 			position: fixed;

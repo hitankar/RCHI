@@ -52,7 +52,7 @@ add_shortcode( 'conversion_button', function( $atts ) {
   $random = floor(rand(1,100));
   return <<<HTML
 <form id="conversion_form_{$random}" name="zipform" method="get" class="form-inline conversion_form" action="/health/cafe">
-  <div class="form-group">
+  <div class="cform-group">
     <label class="sr-only" for="conversion-zipcode">{$a['textbox_placeholder']}</label>
     <input type="text" name="conversion_zipcode" id="conversion-zipcode" value="" placeholder="{$a['textbox_placeholder']}" class="form-control" />
     <input type="hidden" name="curl" value="reallycheaphealthinsurance.com" />

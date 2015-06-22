@@ -51,6 +51,9 @@
         if ( $(this).scrollTop() > 500 ) {
           $(".floating-bar").css('bottom', 0).stop().slideDown();
         }
+
+        equalHeights('section.widget .widget-content', 'section.widget');
+
       }
     },
     // Home page
@@ -75,14 +78,35 @@
     // articles
     'blog': {
       finalize: function() {
-        var height = 0;
-        $('article.hentry').each(function(){
-          height = Math.max( height, $(this).outerHeight() );
-        });
-        $('article.hentry').outerHeight(height);
+        equalHeights('article.hentry');
       }
     }
   };
+
+function equalHeights(selector, updated_selector) {
+  
+  if (updated_selector === undefined) {
+    updated_selector = selector;
+  }
+  
+  if ($(selector).length === 0) {
+    return false;
+  }
+  
+  var height = 0;
+  $(selector).each(function(){
+    height = Math.max( height, $(this).outerHeight() );
+  });
+  
+  var maxHeight = $(updated_selector).css('max-height');
+  maxHeight = maxHeight.slice(0, maxHeight.length-2);
+
+  if (height > maxHeight ) {
+    height = maxHeight;
+  }
+  $(updated_selector).outerHeight(height);
+}
+
 
   // The routing fires all common scripts, followed by the page specific scripts.
   // Add additional events for more control over timing e.g. a finalize event

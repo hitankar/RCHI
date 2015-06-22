@@ -58,6 +58,7 @@
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
+  text-align: center;
 }
 
 // Modal background
@@ -96,7 +97,19 @@
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
   position: relative;
-  padding: $modal-inner-padding;
+  padding: 0 $modal-inner-padding;
+  .col-md-12 {
+    padding: 30px 30px 60px;
+    background-image: url(../images/splash_bg.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+  .col-md-6 {
+    padding: 15px;
+    &:nth-child(0) {
+      border-right: solid 1px #C9C9C9;
+    }
+  }
 }
 
 // Footer (for actions)

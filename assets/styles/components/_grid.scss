@@ -11,4 +11,5 @@
 }
 .sidebar {
   @include make-sm-column($sidebar-sm-columns);
+  margin-bottom: 4em;
 }

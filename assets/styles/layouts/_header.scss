@@ -1,6 +1,6 @@
 .navbar-rchi {
 	.icon-bar {
-		background-color: black;
+		background-color: #fff;
 	}
 }
 
@@ -36,11 +36,16 @@ header[role="banner"] .container {
 	@include invert-color($link-color);
 	text-transform: uppercase;
 	line-height: 1.2em;
+	
 	small {
 		display: block;
 	}
 
 	&:hover {
 		@include invert-color($link-hover-color);
+	}
+
+	@media (max-width: $screen-sm-min ) {
+		font-size: 15px;
 	}
 }

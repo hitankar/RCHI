@@ -57,7 +57,7 @@ class ThemeCustomizer
         ) );
 
         $wp_manager->add_control( new \WP_Customize_Color_Control( $wp_manager, 'bg_color_setting', array(
-            'label'   => 'Background Color',
+            'label'   => 'Splash Page Background Color',
             'section' => 'customizer_section',
             'settings'   => 'bg_color_setting',
             'priority' => 1

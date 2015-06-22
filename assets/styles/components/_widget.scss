@@ -2,14 +2,15 @@
 section.widget {
 	margin-top: 2em;
 	position: relative;
-	height: 300px;
+	max-height: 200px;
+	@include transition(height ease-in-out .3s, box-shadow ease-in-out .3s);
 	&:hover {
 		.widget-content {
 			height: auto;
 			z-index: 9;
 			width: 100%;
-			@include box-shadow(0 1px 2px rgba(0,0,0,.075));
-			@include transition(height ease-in-out .15s, box-shadow ease-in-out .15s);
+			@include box-shadow(0 0 5px rgba(0,0,0,0.5));
+			@include transition(height ease-in-out .3s, box-shadow ease-in-out .3s);
 		}
 	}
 	.widget-content {
