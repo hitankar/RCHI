@@ -1,16 +1,22 @@
 .conversion_form {
+	margin: 3em auto 0;
+	text-align: left;
 	.cform-group {
-		background: url(../images/zipcode_textbox.png) top right no-repeat;
+		background: #107400 url(../images/zipcode_textbox.png) top right no-repeat;
 		width: 238px;
 		height: 63px;
 		float: left;
 
 		@media (max-width: $screen-md-min) {
-			width: 200px;
+			width: 70%;
 		}
 
 		@media (max-width: $screen-sm-min) {
-			width: 174px;
+			width: 68%;
+		}
+
+		@media (max-width: $screen-xs-min) {
+			width: 59%;
 		}
 
 		#conversion-zipcode {
@@ -33,11 +39,11 @@
 		text-transform: uppercase;
 
 		@media (max-width: $screen-md-min) {
-			width: 150px;
+			width: 160px;
 		}
 
 		@media (max-width: $screen-sm-min) {
-			width: 100px;
+			width: 110px;
 		}
 	}
 }

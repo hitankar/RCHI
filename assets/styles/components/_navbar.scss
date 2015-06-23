@@ -1,16 +1,36 @@
 
 .navbar-nav {
-  margin-top: 5px;
+    margin-top: 10px;
+    width: auto;
+  
+  @media (min-width: $screen-sm-min) {
+    width: 41%;
+  }
+  
+  @media (min-width: $screen-md-min) {
+    width: 55%;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    width: auto;
+  }
+
   > li > a {
-  	@include invert-color($link-color);
+    @include invert-color($link-color);
     padding-top:    10px;
     padding-bottom: 10px;
     // line-height: $line-height-computed;
     text-transform: uppercase;
     &:hover {
-    	background: none;
+      background: none;
       @include invert-color($link-hover-color);
+
+      @media (min-width: $screen-md-min) {
+        background-color: #17A400;
+        color: #000;
+      }
     }
+
   }
 
   // Uncollapse the nav

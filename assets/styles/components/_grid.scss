@@ -1,6 +1,6 @@
 // Grid system
 .main {
-  @include make-sm-column($main-sm-columns);
+  // @include make-sm-column($main-sm-columns);
   // .sidebar-primary & {
   //   @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
   // }
@@ -8,8 +8,12 @@
   margin-bottom: 2em;
   padding-left: 3.8em;
   padding-right: 3.8em;
+  float:none;
+  position: relative;
 }
 .sidebar {
-  @include make-sm-column($sidebar-sm-columns);
+  // @include make-sm-column($sidebar-sm-columns);
   margin-bottom: 4em;
+  float:none;
+  position: relative;
 }

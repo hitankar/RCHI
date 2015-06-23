@@ -9,18 +9,39 @@ body {
 	padding: 0;
 	border-top: solid 2px #091231;
 	.content {
-		margin: 0em 4em;
+		margin: 0em 2em;
 		padding-top: 6em;
+		@media (min-width: $screen-md-min) {
+			margin: 0em 3em;
+		}
+		@media (min-width: $screen-lg-min) {
+			margin: 0em 4em;
+		}
 	}
 	.page-section {
-		margin: 0 -7.8em;
+		margin: 0 -3em;
 		// background-color: silver;
-		padding: 3em 6.8em 3em;
-		@include clearfix()
+		padding: 2em 3em 3em;
+		text-align: center;
+		@include clearfix;
+		@media (min-width: $screen-md-min) {
+			padding: 2em 4em 3em;
+		}
+		@media (min-width: $screen-md-min) {
+			text-align: left;
+			padding: 3em 5em 3em;
+			margin: 0 -7em;
+		}
+		@media (min-width: $screen-lg-min) {
+			text-align: left;
+			margin: 0 -7.8em;
+			padding: 3em 6.8em 3em;
+		}
 	}
 	/** page section theme **/
 	.dark-bg {
 		@include invert-color($text-color);
+		padding-bottom: 0;
 
 		hr {
 			background: url(../images/bark-bg_hr.png) bottom center no-repeat;
@@ -78,14 +99,25 @@ body {
 		text-align: center;
 		@include clearfix;
 		.step-container {
-			width: 220px;
+			width: 180px;
+			padding: 20px;
 			@include clearfix;
 			position: relative;
-			display: inline-block;
-			@media (max-width: $screen-md-min) {
-				width: 120px;
+			display: block;
+			margin: 0 auto;
+
+			@media (min-width: $screen-xs-min) {
+				width: 144px;
 				padding: 20px;
+				display: inline-block;
 			}
+
+			@media (min-width: $screen-sm-min) {
+				width: 220px;
+				padding: 20px;
+				display: inline-block;
+			}
+
 			.step-number {
 				position: absolute;
 				top: 5%;
@@ -99,13 +131,36 @@ body {
 				line-height: 2;
 				font-size: x-large;
 				z-index: 1;
+
+				@media (min-width: $screen-xs-min) {
+					top: 10%;
+					left: 10%;
+					font-size: large;
+				}
+				
+				@media (min-width: $screen-sm-min) {
+					top: 10%;
+					left: 10%;
+					font-size: x-large;
+				}
 			}
 			.step-img {
 				z-index: 0;
-				@media (max-width: $screen-md-min) {
-					width: 100px;
-					height: 100px; 
+				width: 150px;
+				height: 150px;
+
+				@media (min-width: $screen-xs-min) {
+					width: 120px;
+					height: 120px;
+
 				}
+				
+				@media (min-width: $screen-sm-min) {
+					width: 150px;
+					height: 150px; 
+				}
+				
+
 			}
 
 			.step-caption {

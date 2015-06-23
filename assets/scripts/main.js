@@ -53,6 +53,7 @@
         }
 
         equalHeights('section.widget .widget-content', 'section.widget');
+        equalHeights('article.hentry');
 
       }
     },

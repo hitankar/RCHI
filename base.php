@@ -20,14 +20,14 @@ use Roots\Sage\Wrapper;
       <?php if (is_front_page()): ?>
       <div class="header-banner">
         <div>
-          <img src="<?php echo get_theme_mod( 'hb_image_setting'); ?>" class="img-responsive">
+          <img src="<?php echo get_theme_mod( 'hb_image_setting'); ?>" class="">
         </div>
       </div>
       <?php endif; ?>
       <?php if (is_page_template( 'front-page-car.php' )): ?>
       <div class="header-banner">
         <div>
-          <img src="<?php echo get_theme_mod( 'cb_image_setting' ); ?>" class="img-responsive">
+          <img src="<?php echo get_theme_mod( 'cb_image_setting' ); ?>" class="">
         </div>
       </div>
       <?php endif; ?>
@@ -36,6 +36,7 @@ use Roots\Sage\Wrapper;
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
         <?php if (Config\display_sidebar()) : ?>
+          <hr>
           <aside class="sidebar row" role="complementary">
             <?php include Wrapper\sidebar_path(); ?>
           </aside><!-- /.sidebar -->
