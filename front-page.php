@@ -15,9 +15,9 @@
       <div class="modal-content">
         <div class="modal-body">
           <section class="row">
-            <div class="col-md-12 dark-bg" style="background-color: <?php echo get_theme_mod( 'bg_color_setting'); ?>;"><?php echo do_shortcode( get_post_meta( get_the_ID(), '_splashpage_text_top', true ) ); ?></div>
-            <div class="col-md-6"><?php echo do_shortcode( get_post_meta( get_the_ID(), '_splashpage_text_left', true ) ); ?></div>
-            <div class="col-md-6"><?php echo do_shortcode( get_post_meta( get_the_ID(), '_splashpage_text_right', true ) ); ?></div>
+            <div class="col-xs-12 col-sm-12 col-md-12 dark-bg splash-text-top" style="background-color: <?php echo get_theme_mod( 'bg_color_setting'); ?>;"><?php echo do_shortcode( get_post_meta( get_the_ID(), '_splashpage_text_top', true ) ); ?></div>
+            <div class="col-xs-12 col-sm-6 col-md-6 splash-text-left"><?php echo do_shortcode( get_post_meta( get_the_ID(), '_splashpage_text_left', true ) ); ?></div>
+            <div class="col-xs-12 col-sm-6 col-md-6 splash-text-right"><?php echo do_shortcode( get_post_meta( get_the_ID(), '_splashpage_text_right', true ) ); ?></div>
           </section>
           
         </div>

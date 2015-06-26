@@ -1,0 +1,24 @@
+.splash-text-top {
+	padding-bottom: 70px;
+}
+
+.splash-text-left {
+	border-bottom: solid 1px #C9C9C9;
+	@media (min-width: $screen-sm-min) {
+    	border-right: solid 1px #C9C9C9;
+    	border-bottom: none;
+    }
+ }
+
+ .splash-text-left, .splash-text-right {
+ 	@media (min-width: $screen-sm-min) {
+	 	.cform-group {
+	 		width: 60%;
+	 	}
+	 	#conversion-button {
+	 		width: 40%;
+	 	}
+ 	}
+ 	
+
+ }

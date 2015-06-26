@@ -37,11 +37,14 @@ body {
 			margin: 0 -7.8em;
 			padding: 3em 6.8em 3em;
 		}
+		&.dark-bg {
+			padding-bottom: 0;
+		}
 	}
 	/** page section theme **/
 	.dark-bg {
 		@include invert-color($text-color);
-		padding-bottom: 0;
+		
 
 		hr {
 			background: url(../images/bark-bg_hr.png) bottom center no-repeat;
@@ -50,6 +53,8 @@ body {
 		}
 	}
 	/* steps */
+
+
 
 	.textured-bg {
 		@include invert-color($text-color);
