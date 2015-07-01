@@ -68,9 +68,39 @@ function widgets_init() {
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 
 /** Custom Rewrite Rule **/
+// add_action('init', function() {
+//   add_rewrite_rule('health/(.*)?$', 'http://www.guidetoaffordableinsurance.com/health/$1', 'top');
+// });
+
 add_action('init', function() {
-  add_rewrite_rule('health/(.*)?$', 'http://www.guidetoaffordableinsurance.com/health/$1', 'top');
+
+  $fileName = ".htaccess";
+  $wordpressPath = get_home_path();
+  $structure = "{$wordpressPath}health/";
+  $file = "{$structure}{$fileName}";
+
+  if ( file_exists ( $file ) )
+    return false;
+
+  if (!mkdir($structure, 0777, true)) {
+
+      die('Failed to create folders. Please create /health/ at the root of your Wordpress installation');
+
+  } else {
+
+    $htaccessFile = fopen($file, "w") or die('Unable to create .htaccess file.');
+    $txt = <<<TEXT
+  <IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule ^(.*)$ http://www.guidetoaffordableinsurance.com/health/$1 [P,L]
+  </IfModule>
+TEXT;
+    fwrite($htaccessFile, $txt);
+    fclose($htaccessFile);
+  }
+
 });
+
 
 /** Custom shortcode for customizable sections through the editor **/
 add_action('init', function() {
@@ -110,3 +140,18 @@ function rchi_mce_editor_buttons($rchi_mceEditor_buttons_id, $js_file) {
 // Removing autoparagraph
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
+
+function get_home_path() {
+  $home    = set_url_scheme( get_option( 'home' ), 'http' );
+  $siteurl = set_url_scheme( get_option( 'siteurl' ), 'http' );
+  if ( ! empty( $home ) && 0 !== strcasecmp( $home, $siteurl ) ) {
+    $wp_path_rel_to_home = str_ireplace( $home, '', $siteurl ); /* $siteurl - $home */
+    $pos = strripos( str_replace( '\\', '/', $_SERVER['SCRIPT_FILENAME'] ), trailingslashit( $wp_path_rel_to_home ) );
+    $home_path = substr( $_SERVER['SCRIPT_FILENAME'], 0, $pos );
+    $home_path = trailingslashit( $home_path );
+  } else {
+    $home_path = ABSPATH;
+  }
+
+  return str_replace( '\\', '/', $home_path );
+}
