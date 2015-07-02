@@ -47,11 +47,11 @@ add_filter('excerpt_length', function() {
 add_shortcode( 'conversion_button', function( $atts ) {
   $a = shortcode_atts( array(
         'textbox_placeholder' => 'Enter Zipcode',
-        'button_text'         => 'Click Me',
+        'button_text'         => 'Get Quote',
         'auto'                => false,
     ), $atts );
   $random = floor(rand(1,100));
-  if ($a['auto'] == true) {
+  if ($a['auto'] === true) {
 
     return <<<HTML
     <form id="conversion_form_{$random}" name="zipform" method="get" class="form-inline conversion_form" action="/car-insurance-form">

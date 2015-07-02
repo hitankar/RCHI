@@ -27,7 +27,7 @@ jQuery(function(){
                         if( selected ){
                             //If text is selected when button is clicked
                             //Wrap section around it.
-                            content =  '[section css_class="' + cssClass + '"/]'+selected+'[/section]';
+                            content =  '[section css_class="' + cssClass + '"]'+selected+'[/section]';
                         } else {
                             content =  '[section css_class="' + cssClass + '"]';
                         }

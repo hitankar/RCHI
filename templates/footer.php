@@ -20,6 +20,7 @@
 	    endif;
 	    ?>
 	    <div classs="copyright">Copyright &copy; <?php echo date("Y")?> <?php echo get_bloginfo('name') ?>. All Rights Reserved. </div>
+        <div id="dmca"></div>
     	</div>
     	<div class="col-md-3">
     	<!-- social media icons -->

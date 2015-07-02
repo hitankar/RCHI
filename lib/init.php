@@ -138,8 +138,18 @@ function rchi_mce_editor_buttons($rchi_mceEditor_buttons_id, $js_file) {
 
 
 // Removing autoparagraph
-remove_filter( 'the_content', 'wpautop' );
-remove_filter( 'the_excerpt', 'wpautop' );
+remove_filter('the_content','wpautop');
+
+//decide when you want to apply the auto paragraph
+
+add_filter('the_content',function ($content) {
+  if(get_post_type()=='page') //if it does not work, you may want to pass the current post object to get_post_type
+    return $content;//no autop
+  else
+    return wpautop($content);
+});
+
+
 
 function get_home_path() {
   $home    = set_url_scheme( get_option( 'home' ), 'http' );

@@ -15,24 +15,29 @@
     width: auto;
   }
 
-  > li > a {
-    @include invert-color($link-color);
-    padding-top:    10px;
-    padding-bottom: 10px;
-    // line-height: $line-height-computed;
-    text-transform: uppercase;
-    &:hover {
+  > li {
+    &.current-menu-item {
       background: none;
-      @include invert-color($link-hover-color);
+        background-color: darken(#17A400, 10%);
+    }
+    > a {
+      @include invert-color($link-color);
+      padding-top:    10px;
+      padding-bottom: 10px;
+      // line-height: $line-height-computed;
+      text-transform: uppercase;
+      &:hover {
+        background: none;
+        @include invert-color($link-hover-color);
 
-      @media (min-width: $screen-md-min) {
-        background-color: #17A400;
-        color: #000;
+        @media (min-width: $screen-md-min) {
+          background-color: #17A400;
+          color: #000;
+        }
       }
     }
-
   }
-
+    
   // Uncollapse the nav
   @media (min-width: $grid-float-breakpoint) {
     float: left;
@@ -67,4 +72,8 @@
     @include border-bottom-radius(4px);
     @include border-left-radius(4px);
   }
+}
+
+.sub-menu {
+  @extend .dropdown-menu;
 }

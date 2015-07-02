@@ -21,18 +21,18 @@ jQuery(function(){
                         //If text is selected when button is clicked
                         //add after the content;
                         /*jshint multistr: true */
-                        content =  selected + '[steps css_class="' + cssClass + '"/] \
-                                    <!-- Note: Alignment works with 3 steps only --> \
-                                    [step step_number="1" image_file="http://example.com/image.png" caption="This is a step 1" /] \
-                                    [step step_number="2" image_file="http://example.com/image.png" caption="This is a step 2" /] \
-                                    [step step_number="3" image_file="http://example.com/image.png" caption="This is a step 3" /] \
+                        content =  selected + '[steps css_class="' + cssClass + '"/] \n\
+                                    <!-- Note: Alignment works with 3 steps only --> \n\
+                                    [step step_number="1" image_file="http://example.com/image.png" caption="This is a step 1" /] \n\
+                                    [step step_number="2" image_file="http://example.com/image.png" caption="This is a step 2" /] \n\
+                                    [step step_number="3" image_file="http://example.com/image.png" caption="This is a step 3" /] \n\
                                     [/steps]';
                     } else {
-                        content =  '[steps css_class="' + cssClass + '"] \
-                                    <!-- Three steps can be added here --> \
-                                    [step step_number="1" image_file="http://example.com/image.png" caption="This is a step 1" /] \
-                                    [step step_number="2" image_file="http://example.com/image.png" caption="This is a step 2" /] \
-                                    [step step_number="3" image_file="http://example.com/image.png" caption="This is a step 3" /] \
+                        content =  '[steps css_class="' + cssClass + '"] \n\
+                                    <!-- Three steps can be added here --> \n\
+                                    [step step_number="1" image_file="http://example.com/image.png" caption="This is a step 1" /] \n\
+                                    [step step_number="2" image_file="http://example.com/image.png" caption="This is a step 2" /] \n\
+                                    [step step_number="3" image_file="http://example.com/image.png" caption="This is a step 3" /] \n\
                                     [/steps]';
                     }
                     

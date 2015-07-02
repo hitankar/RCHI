@@ -53,7 +53,7 @@
         }
 
         equalHeights('section.widget .widget-content', 'section.widget');
-        equalHeights('article.hentry');
+        equalHeights('.row > article.post');
 
       }
     },
@@ -79,7 +79,7 @@
     // articles
     'blog': {
       finalize: function() {
-        equalHeights('article.hentry');
+        // equalHeights('article.post');
       }
     }
   };

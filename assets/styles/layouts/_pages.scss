@@ -19,7 +19,7 @@ body {
 		}
 	}
 	.page-section {
-		margin: 0 -3em;
+		margin: 1em -3em;
 		// background-color: silver;
 		padding: 2em 3em 3em;
 		text-align: center;
@@ -48,7 +48,7 @@ body {
 
 		hr {
 			background: url(../images/bark-bg_hr.png) bottom center no-repeat;
-			height: 40px;
+			height: 20px;
 			border: 0 none;
 		}
 	}
@@ -73,8 +73,8 @@ body {
 			pointer-events: none;
 			border-color: rgba(255, 255, 255, 0);
 			border-top-color: #CFCFCF;
-			border-width: 30px;
-			margin-left: -30px;
+			border-width: 20px;
+			margin-left: -20px;
 		}
 
 		&:after {
@@ -88,8 +88,8 @@ body {
 			pointer-events: none;
 			border-color: rgba(255, 255, 255, 0);
 			border-bottom-color: #CFCFCF;
-			border-width: 30px;
-			margin-left: -30px;
+			border-width: 20px;
+			margin-left: -20px;
 		}
 
 		hr {
@@ -114,13 +114,13 @@ body {
 			@media (min-width: $screen-xs-min) {
 				width: 144px;
 				padding: 20px;
-				display: inline-block;
+				display: inline-table;
 			}
 
 			@media (min-width: $screen-sm-min) {
 				width: 220px;
 				padding: 20px;
-				display: inline-block;
+				display: inline-table;
 			}
 
 			.step-number {

@@ -1,5 +1,8 @@
 .splash-text-top {
 	padding-bottom: 70px;
+	hr {
+		height: 40px;
+	}
 }
 
 .splash-text-left {
@@ -11,6 +14,9 @@
  }
 
  .splash-text-left, .splash-text-right {
+ 	hr {
+		height: 30px;
+	}
  	@media (min-width: $screen-sm-min) {
 	 	.cform-group {
 	 		width: 60%;
