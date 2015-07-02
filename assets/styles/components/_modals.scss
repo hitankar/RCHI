@@ -14,7 +14,6 @@
 
 // Container that the modal scrolls within
 .modal {
-  background-color: $content-color;
   display: none;
   overflow: hidden;
   position: fixed;
@@ -153,7 +152,7 @@
     float: none;
     position: absolute;
     top: 0;
-    background: #fff;
+    background-color: $modal-content-bg;
     padding: 0.3em;
     font-size: xx-large;
     margin: 0 auto;
