@@ -31,8 +31,8 @@ article.post {
 
 .nav-links {
 	@extend .row;
-	> div {
-	  	@include make-sm-column(6);
+	.nav-previous, .nav-next {
+	  	@extend .col-xs-6;
 	  	a {
 		  	background: #1D9B0B;
 		  	text-transform: uppercase;
@@ -42,7 +42,7 @@ article.post {
 	  		text-decoration: none;
 	  	}
 	}
-	> div:first-child {
+	.nav-previous {
 		text-align: right;
 	}
 }
